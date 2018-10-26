@@ -27,7 +27,9 @@ public class UserManager  {
     	this.sessionFactory=sf;
     }
 
-
+    public User getuser() {
+    	return u;
+    }
 	public void addAccount(User user) {
 		this.sessionFactory.getCurrentSession().save(user);
 		
@@ -48,6 +50,8 @@ public class UserManager  {
 	    	u=(User) iterator.next();
 	    	if(u.getAccountName().equals(name)&&u.getPassword().equals(password) ){
 	    		check=true;
+	    		break;
+	    	
 	    	}
 	    }
 		
