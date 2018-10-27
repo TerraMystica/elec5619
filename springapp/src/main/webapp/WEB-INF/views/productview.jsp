@@ -9,6 +9,7 @@
     <P>Product Description: <c:out value="${model.product.description}"/>    <br> </P>
     <P>Product Tag:  <c:out value="${model.product.tag}"/>    <br> </P>
     <P>Product id:  <c:out value="${model.product.id}"/>    <br> </P>
+    <P>User id:  <c:out value="${model.product.user}"/>    <br> </P>
 
   
 

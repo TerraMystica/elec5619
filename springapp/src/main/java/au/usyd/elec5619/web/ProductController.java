@@ -21,14 +21,15 @@ public class ProductController {
 	}
 	@RequestMapping(value="/postProduct",method=RequestMethod.POST)
 	public String addProduct(HttpServletRequest httpServletRequest) {
-		String user=httpServletRequest.getParameter("user");
+		
 		Product product=new Product();
+		product.setUser(Long.parseLong(httpServletRequest.getParameter("user").trim()));
 		product.setDescription(httpServletRequest.getParameter("description"));
 		product.setPrice(Double.valueOf(httpServletRequest.getParameter("price")));
 		product.setTag(httpServletRequest.getParameter("tag"));
 		product.setName(httpServletRequest.getParameter("name"));
-		product.setUser(Long.parseLong(user));
+	
 		this.productManager.addProduct(product);
-		return "redirect:/hello.htm";
+		return "redirect:/hello.htm?user="+httpServletRequest.getParameter("user");
 	}
 }

@@ -27,7 +27,9 @@ public class UserManager  {
     	this.sessionFactory=sf;
     }
 
-
+    public User getuser() {
+    	return u;
+    }
 	public void addAccount(User user) {
 		this.sessionFactory.getCurrentSession().save(user);
 		
@@ -48,6 +50,24 @@ public class UserManager  {
 	    	u=(User) iterator.next();
 	    	if(u.getAccountName().equals(name)&&u.getPassword().equals(password) ){
 	    		check=true;
+	    		break;
+	    	
+	    	}
+	    }
+		
+		return check;
+	}
+	public Boolean exist(String name) {
+		Boolean check=false;
+		users1=(this.sessionFactory).getCurrentSession().createQuery("FROM User").list();
+		iterator=users1.iterator();
+		users2=new ArrayList();
+	    while(iterator.hasNext()){
+	    	u=(User) iterator.next();
+	    	if(u.getAccountName().equals(name)){
+	    		check=true;
+	    		break;
+	    	
 	    	}
 	    }
 		

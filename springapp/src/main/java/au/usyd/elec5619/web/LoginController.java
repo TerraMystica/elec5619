@@ -16,6 +16,7 @@ import au.usyd.elec5619.service.UserManager;
 @RequestMapping(value="/user/**")
 public class LoginController {
 	protected final Log logger = LogFactory.getLog(getClass());
+	private long UserId;
 	@Resource(name="userManager")
 	private UserManager userManager;
 	@RequestMapping(value="/login")
@@ -24,12 +25,14 @@ public class LoginController {
 	}
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(HttpServletRequest httpServletRequest) {
-		User u=new User();
-		u.setAccountName(httpServletRequest.getParameter("AccountName"));
-		u.setPassword(httpServletRequest.getParameter("Password"));
-		u.setType(httpServletRequest.getParameter("Type"));
-		if (this.userManager.verify(u.getAccountName(),u.getPassword())== true)
-		{  return "redirect:/hello.htm?user=${u.getId()}";}
+	
+		String name=httpServletRequest.getParameter("AccountName");
+		String password=httpServletRequest.getParameter("Password");
+	
+		if (this.userManager.verify(name,password)== true)
+		{   UserId=userManager.getuser().getId();
+			
+			return "redirect:/hello.htm?user="+UserId;}
 		else {return "redirect:/user/login.htm";}
 	}
 }
