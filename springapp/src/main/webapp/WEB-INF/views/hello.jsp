@@ -12,6 +12,9 @@
   <br>
   	<a href="<c:url value="/product/postProduct.htm?user=${model.user}"/>">Post Product</a>
   <br>
+    <br>
+  	<a href="<c:url value="deleteProduct.htm?user=${model.user}"/>">Delete Product</a>
+  <br>
   
   <p><fmt:message key="greeting"/><c:out value="${model.now}"/></p>
   

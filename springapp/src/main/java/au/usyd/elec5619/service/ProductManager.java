@@ -14,4 +14,6 @@ public interface ProductManager extends Serializable{
 
 	
 	  public List<Product> findProductbyName(String name);
+
+	public Object getProductsbyUser(long user);
 }
