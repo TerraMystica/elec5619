@@ -50,13 +50,13 @@ public class UserManager  {
 	    	u=(User) iterator.next();
 	    	if(u.getAccountName().equals(name)&&u.getPassword().equals(password) ){
 	    		check=true;
+
 	    		break;
 	    	}
 	    }
 		
 		return check;
 	}
-	//
 	public Boolean exist(String name) {
 		Boolean check=false;
 		users1=(this.sessionFactory).getCurrentSession().createQuery("FROM User").list();
@@ -66,6 +66,7 @@ public class UserManager  {
 	    	u=(User) iterator.next();
 	    	if(u.getAccountName().equals(name)){
 	    		check=true;
+
 	    		break;
 	    	
 	    	}
