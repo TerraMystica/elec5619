@@ -11,9 +11,9 @@ public interface ProductManager extends Serializable{
      public void addProduct(Product product);
      public void deleteProduct(long id);
      public Product getProductById(long id);
-  
+
+	
 	  public List<Product> findProductbyName(String name);
 
 	public Object getProductsbyUser(long user);
-
 }

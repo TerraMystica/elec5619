@@ -13,6 +13,7 @@
   
   <p><fmt:message key="greeting"/><c:out value="${model.now}"/></p>
   
+\
   
 </body>
 </html>
