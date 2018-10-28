@@ -22,7 +22,7 @@ String user = request.getParameter("user");
     <input type="hidden" name="user" value=<%=user%>>
 
 	<input type="submit" value="Add"/>
-		</f:form>
+		</f:form>>
 
 </body>
 
