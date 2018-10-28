@@ -51,6 +51,11 @@ public class SimpleProductManager implements ProductManager {
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public Object getProductsbyUser(long user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 

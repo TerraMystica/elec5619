@@ -36,6 +36,10 @@ public class DatabaseProductManager implements ProductManager {
 	public List<Product> getProducts() {
 		return (this.sessionFactory).getCurrentSession().createQuery("FROM Product").list();
 	}
+	
+	public List<Product> getProductsbyUser(long user) {
+		return (this.sessionFactory).getCurrentSession().createQuery("FROM Product WHERE user=?").setParameter(0, user).list();
+	}
 
 	@Override
 	public void setProducts(List<Product> products) {

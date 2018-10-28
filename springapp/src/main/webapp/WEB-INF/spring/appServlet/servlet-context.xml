@@ -43,7 +43,10 @@
 		
 		</beans:bean>
 		
+		<beans:bean name="/deleteProduct.htm" class="au.usyd.elec5619.web.DeleteController">
 		
+		</beans:bean>
+	
 	
 	
 	

@@ -32,4 +32,6 @@ public class ProductController {
 		this.productManager.addProduct(product);
 		return "redirect:/hello.htm?user="+httpServletRequest.getParameter("user");
 	}
+
+
 }
