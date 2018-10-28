@@ -14,7 +14,7 @@
 	AccountName:<input type="text" name="AccountName"/>
 	Password:<input type="password" name="Password"/>
 	<input type="submit" value="Login"/>
-		</f:form>>
+		</f:form>
   <br>
   	<a href="<c:url value="/user/register"/>">Sign Up</a>
   <br>
