@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: ms
-Build-Jdk: 1.8.0_144
-=======
 Built-By: Administrator
 Build-Jdk: 1.8.0_181
->>>>>>> refs/remotes/origin/dkf
 Created-By: Maven Integration for Eclipse
 

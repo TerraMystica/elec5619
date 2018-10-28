@@ -7,7 +7,7 @@ public class ProductTest extends TestCase{
 	private Product product;
 	
 	protected void setUp() throws Exception{
-		product =new Product();
+		product = new Product();
 	}
 	
 	public void testDescription() {
@@ -16,6 +16,7 @@ public class ProductTest extends TestCase{
 		product.setDescription(testDescription);
 		assertEquals(testDescription, product.getDescription());
 	}
+	
 	public void testPrice() {
 		double testPrice=100.00;
 		assertEquals(0,0,0);

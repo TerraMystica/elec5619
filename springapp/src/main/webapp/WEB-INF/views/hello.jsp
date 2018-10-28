@@ -24,5 +24,8 @@
   		
   </form>
   
+  <a href="<c:url value="/shopping/shoppingCarts.htm"/>">Shopping Carts</a>
+  
+
 </body>
 </html>

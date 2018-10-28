@@ -46,6 +46,7 @@ public class ProductViewController implements Controller {
 	public void setProduct(Product product) {
 		this.product=product;
 	}
+	
 	public void setProductManager(ProductManager productManager) {
 		this.productManager=productManager;
 		
