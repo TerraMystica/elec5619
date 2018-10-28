@@ -39,4 +39,6 @@ public class ProductListController implements Controller {
 		this.productManager=productManager;
 		
 	}
+	
+	
 }

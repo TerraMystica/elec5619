@@ -12,7 +12,8 @@
     <P>User id:  <c:out value="${model.product.user}"/>    <br> </P>
 
   
-
+<br/>
+<a href="<c:url value="/shopping/shoppingCart/postProduct.htm?user=${model.user}"/>">Post Product</a>
   
 
 </body>
