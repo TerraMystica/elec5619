@@ -56,6 +56,7 @@ public class UserManager  {
 		
 		return check;
 	}
+	//
 	public Boolean exist(String name) {
 		Boolean check=false;
 		users1=(this.sessionFactory).getCurrentSession().createQuery("FROM User").list();
