@@ -51,7 +51,6 @@ public class UserManager  {
 	    	if(u.getAccountName().equals(name)&&u.getPassword().equals(password) ){
 	    		check=true;
 	    		break;
-	    	
 	    	}
 	    }
 		

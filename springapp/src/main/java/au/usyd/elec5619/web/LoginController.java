@@ -31,7 +31,6 @@ public class LoginController {
 	
 		if (this.userManager.verify(name,password)== true)
 		{   UserId=userManager.getuser().getId();
-			
 			return "redirect:/hello.htm?user="+UserId;}
 		else {return "redirect:/user/login.htm";}
 	}
