@@ -17,7 +17,7 @@
   </c:forEach>
   
   <br/><br/>
-  
+  <!-- test github -->
 
   
   <p><fmt:message key="greeting"/><c:out value="${model.now}"/></p>
