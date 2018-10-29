@@ -49,7 +49,12 @@ public class SimpleShoppingCartManager implements ShoppingCartManager{
 	@Override
 	public boolean updateProduct(ShoppingCart shoppingCart) {
 		// TODO Auto-generated method stub
-		return false;
+		try {
+			this.sessionFactory.getCurrentSession().update(shoppingCart);
+		}catch (HibernateException he) {
+			return false;
+		}
+		return true;
 	}
 
 	@Override

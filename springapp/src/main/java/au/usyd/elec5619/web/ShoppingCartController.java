@@ -29,7 +29,7 @@ public class ShoppingCartController {
 		String now = (new java.util.Date()).toString();
 		Map<String,Object> myModel=new HashMap<String, Object>();
 		myModel.put("now", now);
-		
+		myModel.put("user", request.getParameter("user"));
 		myModel.put("shoppingcarts",this.shoppingCartManager.getAllProduct());
 		return new ModelAndView("shoppingCarts", "model", myModel);
 	}
@@ -62,5 +62,28 @@ public class ShoppingCartController {
 		this.shoppingCartManager.addProduct(sc);
 		return "redirect:/hello.htm?user="+httpServletRequest.getParameter("user");
 	}
+	
+	@RequestMapping(value="/updateShoppingCart")
+	public String updateShoppingCart(Model uiModel) {
+		return "shoppingCarts";
+	}
+	
+	@RequestMapping(value="/updateShoppingCart", method=RequestMethod.POST)
+	public String updateShoppingCart(HttpServletRequest httpServletRequest) {
+		
+		ShoppingCart sc=new ShoppingCart();
+		sc.setId(Long.parseLong(httpServletRequest.getParameter("id").trim()));;
+		sc.setUserId(Long.parseLong(httpServletRequest.getParameter("user").trim()));
+		int count = Integer.parseInt(httpServletRequest.getParameter("count").trim());
+		sc.setCounts(count);
+		sc.setPrice(count*Double.valueOf(httpServletRequest.getParameter("price")));
+		sc.setProductId(Long.parseLong(httpServletRequest.getParameter("pid").trim()));
+		sc.setName(httpServletRequest.getParameter("name"));
+		sc.setShippingFee(10);
+		
+		this.shoppingCartManager.updateProduct(sc);
+		return "redirect:/hello.htm?user="+httpServletRequest.getParameter("user");
+	}
+	
 	
 }

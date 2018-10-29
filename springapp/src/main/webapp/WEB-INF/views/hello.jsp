@@ -13,11 +13,14 @@
     <i>$<c:out value="${prodd.price}"/></i>  
     <c:out value="${prodd.tag}"/>   
     <a href="<c:url value="productview.htm?pid=${prodd.getId()}"/>">"${prodd.name}"</a>
+    
+    
+    
     <f:form method="POST" action="shopping/addShoppingCart.htm">
-	    <input type="hidden" name="user" value="${model.user}">
-	    <input type="hidden" name="pid" value="${prodd.id}">
-	    <input type="hidden" name="name" value="${prodd.name}">
-	    <input type="hidden" name="price" value="${prodd.price}">
+	    <input type="hidden" name="user" value="${model.user}"/>
+	    <input type="hidden" name="pid" value="${prodd.id}"/>
+	    <input type="hidden" name="name" value="${prodd.name}"/>
+	    <input type="hidden" name="price" value="${prodd.price}"/>
 		<input type="submit" value="Add to Shopping Cart"/>
 	</f:form>
 
@@ -35,7 +38,7 @@
   	<a href="<c:url value="deleteProduct.htm?user=${model.user}"/>">Delete Product</a>
   <br>
    <br>
-  <a href="<c:url value="/shopping/shoppingCarts.htm"/>">Shopping Carts</a>
+  <a href="<c:url value="/shopping/shoppingCarts.htm?user=${model.user}"/>">Shopping Carts</a>
   <br>
   
   <p><fmt:message key="greeting"/><c:out value="${model.now}"/></p>
