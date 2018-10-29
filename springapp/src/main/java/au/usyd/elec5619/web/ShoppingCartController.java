@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import au.usyd.elec5619.domain.Product;
-import au.usyd.elec5619.service.ProductManager;
+
+import au.usyd.elec5619.domain.ShoppingCart;
 import au.usyd.elec5619.service.ShoppingCartManager;
 
 @Controller
@@ -41,4 +41,26 @@ public class ShoppingCartController {
 		shoppingCartManager.deleteProduct(Long.parseLong(httpServletRequest.getParameter("id")));
 		return "redirect:/shopping/shoppingCarts.htm";
 	}
+	
+	@RequestMapping(value="/addShoppingCart")
+	public String addShoppingCart(Model uiModel) {
+		return "hello";
+	}
+	
+	
+	@RequestMapping(value="/addShoppingCart", method=RequestMethod.POST)
+	public String addShoppingCart(HttpServletRequest httpServletRequest) {
+		
+		ShoppingCart sc=new ShoppingCart();
+		sc.setUserId(Long.parseLong(httpServletRequest.getParameter("user").trim()));
+		sc.setPrice(Double.valueOf(httpServletRequest.getParameter("price")));
+		sc.setCounts(1);
+		sc.setProductId(Long.parseLong(httpServletRequest.getParameter("pid").trim()));
+		sc.setName(httpServletRequest.getParameter("name"));
+		sc.setShippingFee(10);
+		
+		this.shoppingCartManager.addProduct(sc);
+		return "redirect:/hello.htm?user="+httpServletRequest.getParameter("user");
+	}
+	
 }

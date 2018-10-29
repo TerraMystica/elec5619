@@ -7,7 +7,7 @@
 
   <c:forEach items="${model.shoppingcarts}" var="scarts">
     <c:out value="${scarts.productId}"/> 
-    <c:out value="${scarts.name}"/>  
+    <c:out value="${scarts.name}"/> 
     <c:out value="${scarts.counts}"/> 
     <c:out value="${scarts.price}"/>  
     <i>$<c:out value="${scarts.shippingFee}"/></i>

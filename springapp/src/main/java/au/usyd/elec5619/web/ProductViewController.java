@@ -35,8 +35,6 @@ public class ProductViewController implements Controller {
 		Map<String,Object> myModel=new HashMap<String, Object>();
 		myModel.put("now", now);
 		myModel.put("product",this.product);
-		
-		
 		myModel.put("id",id);
 	
 		return new ModelAndView("productview", "model", myModel);

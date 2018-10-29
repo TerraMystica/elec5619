@@ -10,9 +10,9 @@ public class ShoppingCart {
 	@Column(name="Id")
     private long id;
 	@Column(name="userid")
-    private int userId;
+    private long userId;
 	@Column(name="productid")
-    private int productId;
+    private long productId;
 	@Column(name="name")
     private String name;
     @Column(name="counts")
@@ -27,25 +27,25 @@ public class ShoppingCart {
         return id;
     }
 
-    public void setId(int Id) {
+    public void setId(long Id) {
         this.id = Id;
     }
     
     
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
     
-    public int getProductId() {
+    public long getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(long productId) {
         this.productId = productId;
     }
 
