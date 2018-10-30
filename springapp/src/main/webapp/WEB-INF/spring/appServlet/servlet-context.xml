@@ -52,6 +52,13 @@
 	
 		<!-- 4.6 -->
 		
+		
+		<context:component-scan base-package="com.mkyong.web" />
+
+   
+
+		
+		
 	  
  </beans:beans>
 

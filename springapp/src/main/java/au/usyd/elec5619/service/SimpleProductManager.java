@@ -20,6 +20,7 @@ public class SimpleProductManager implements ProductManager {
        public List<Product> getProducts(){
     	  return products;
        }
+       
        public void increasePrice(int percentage) {
     	   throw new UnsupportedOperationException();
        }

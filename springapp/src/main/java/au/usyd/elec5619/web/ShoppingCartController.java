@@ -23,7 +23,7 @@ public class ShoppingCartController {
 	@Resource(name="simpleShoppingCartManager")
 	private ShoppingCartManager shoppingCartManager;
 	
-	@RequestMapping(value="/shoppingCarts")
+	@RequestMapping(value="/shoppingCart")
 	public ModelAndView shoppingCart(HttpServletRequest request) {
 		
 		String now = (new java.util.Date()).toString();
@@ -31,7 +31,7 @@ public class ShoppingCartController {
 		myModel.put("now", now);
 		myModel.put("user", request.getParameter("user"));
 		myModel.put("shoppingcarts",this.shoppingCartManager.getAllProduct());
-		return new ModelAndView("shoppingCarts", "model", myModel);
+		return new ModelAndView("shoppingCart", "model", myModel);
 	}
 	
 	
@@ -58,6 +58,7 @@ public class ShoppingCartController {
 		sc.setProductId(Long.parseLong(httpServletRequest.getParameter("pid").trim()));
 		sc.setName(httpServletRequest.getParameter("name"));
 		sc.setShippingFee(10);
+		sc.setStatus(0);
 		
 		this.shoppingCartManager.addProduct(sc);
 		return "redirect:/hello.htm?user="+httpServletRequest.getParameter("user");

@@ -38,7 +38,7 @@
   	<a href="<c:url value="deleteProduct.htm?user=${model.user}"/>">Delete Product</a>
   <br>
    <br>
-  <a href="<c:url value="/shopping/shoppingCarts.htm?user=${model.user}"/>">Shopping Carts</a>
+  <a href="<c:url value="/shopping/shoppingCart.htm?user=${model.user}"/>">Shopping Carts</a>
   <br>
   
   <p><fmt:message key="greeting"/><c:out value="${model.now}"/></p>
@@ -47,6 +47,39 @@
   		<input type="text" id="testText" name="pname" value=""/>
   		<input type="submit"  value="SearchbyKeyWord"/>
   </form>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 </body>

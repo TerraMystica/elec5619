@@ -23,6 +23,7 @@ public class SimpleShoppingCartManager implements ShoppingCartManager{
     private Iterator<Product> iterator;
     private ShoppingCart shoppingCart;
 	
+    
     @Autowired
     public void setSessionFactory(SessionFactory sf) {
     	this.sessionFactory=sf;
@@ -35,15 +36,15 @@ public class SimpleShoppingCartManager implements ShoppingCartManager{
 	}
 
 	@Override
-	public int deleteProduct(long id) {
+	public boolean deleteProduct(long id) {
 		// TODO Auto-generated method stub
 		ShoppingCart shoppingCart = (ShoppingCart) this.sessionFactory.getCurrentSession().get(ShoppingCart.class,id);
 		try {
 			this.sessionFactory.getCurrentSession().delete(shoppingCart);
 		}catch (HibernateException he) {
-			return 0;
+			return false;
 		}
-		return 1;
+		return true;
 	}
 
 	@Override
@@ -64,3 +65,4 @@ public class SimpleShoppingCartManager implements ShoppingCartManager{
 	}
 
 }
+

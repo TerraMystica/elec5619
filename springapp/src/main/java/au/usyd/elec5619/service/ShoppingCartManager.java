@@ -8,7 +8,7 @@ public interface ShoppingCartManager {
 
     public void addProduct(ShoppingCart hoppingCart);
 
-    public int deleteProduct(long id);
+    public boolean deleteProduct(long id);
 
     public boolean updateProduct(ShoppingCart hoppingCart);
 

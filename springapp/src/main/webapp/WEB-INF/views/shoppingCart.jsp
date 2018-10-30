@@ -31,6 +31,11 @@
   </c:forEach>
   
   <br/><br/>
+  <a href="<c:url value="/order/addOrderRecord.htm?user=${model.user}"/>">Check out</a>
+    
+ 
+  
+  
   <!-- test github -->
 
   

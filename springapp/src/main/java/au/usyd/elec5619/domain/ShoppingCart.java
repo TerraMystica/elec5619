@@ -21,6 +21,8 @@ public class ShoppingCart {
     private double price;
     @Column(name="shippingFee")
     private double shippingFee;
+    @Column(name="status")
+    private int status;
     
 
     public long getId() {
@@ -81,6 +83,14 @@ public class ShoppingCart {
     
     public void setShippingFee(double shippingFee) {
     	this.shippingFee=shippingFee;
+    }
+    
+    public int getStatus() {
+    	return status;
+    }
+    
+    public void setStatus(int status) {
+    	this.status=status;
     }
     
    
