@@ -4,32 +4,63 @@
 <html>
 <head>
 	<title>Comment List</title>
+	<link rel="stylesheet" type="text/css" href="/elec5619/resources/css/commentpage.css">
 </head>
 <body>
-<h1>
-	Comment  
-</h1>
+	<div class="header">
+		<div class="page-title">
+			<a href="/elec5619/comment">Comment Board</a>
+		</div>
+	</div>
+	
 	<form action="add" method="post">
-		<ul>
-			<li>
-				userId: <input type="text" name="userId"/>
-			</li>
-			<li>
-				productId: <input type="text" name="productId"/>
-			</li>
-			<li>
-				Score: <input type="text" name="score"/>
-			</li>
-			<li>
-				Subject: <input type="text" name="subject"/>
-			</li>
-			<li>
-				Content: <input type="text" name="content"/>
-			</li>
-			<li>
-				<input type="submit" name="submit"/>
-			</li>
-		</ul>
+		<table>
+			<tr>
+				<td>
+					<p>userId:</p>
+				</td>
+				<td>
+					<input type="text" name="userId"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>productId:</p>
+				</td>
+				<td>
+					<input type="text" name="productId"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Score:</p>
+				</td>
+				<td>
+					<input type="text" name="score"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Subject:</p>
+				</td>
+				<td>
+					<input type="text" name="subject"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Content:</p>
+				</td>
+				<td>
+					<input type="text" name="content"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" name="submit"/>
+				</td>
+			</tr>
+		</table>
 	</form>
 </body>
 </html>
