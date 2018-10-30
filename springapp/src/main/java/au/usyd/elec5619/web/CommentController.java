@@ -58,7 +58,7 @@ public class CommentController {
 	@RequestMapping(value="/delete")
 	public ModelAndView delete(HttpServletRequest request) throws Exception {
 		long id = Long.parseLong(request.getParameter("id"));
-		scm.deleteComment(id);
+		this.scm.deleteComment(id);
 		return new ModelAndView("redirect:./");
 		
 	}

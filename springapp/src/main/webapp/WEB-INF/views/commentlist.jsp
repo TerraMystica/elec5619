@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>
-	<a href="comment">Comments</a>  
+	<a href="/elec5619/comment">Comments</a>  
 </h1>
 	<table border="1">
 		<tr>
@@ -21,12 +21,12 @@
 		<c:forEach items="${model.comments}" var="prodd">
 			<tr>
 				<td>
-					<a href="comment/getcommentsbyuser?userId=<c:out value="${prodd.userId}" />">
+					<a href="/elec5619/comment/getcommentsbyuser?userId=<c:out value="${prodd.userId}" />">
 						<c:out value="${prodd.userId}" />
 					</a>
 				</td>
 				<td>
-					<a href="comment/getcommentsbyproduct?productId=<c:out value="${prodd.productId}" />">
+					<a href="/elec5619/comment/getcommentsbyproduct?productId=<c:out value="${prodd.productId}" />">
 						<c:out value="${prodd.productId}" />
 					</a>
 				</td>
@@ -35,11 +35,11 @@
 				<td><c:out value="${prodd.subject}" /></td>
 				<td><c:out value="${prodd.content}" /></td>
 				<td>
-					<a href="delete?id=<c:out value="${prodd.id}" />">delete</a>
+					<a href="/elec5619/comment/delete?id=<c:out value="${prodd.id}" />">delete</a>
 				</td>
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="comment/commentpage">Add</a>
+	<a href="/elec5619/comment/commentpage">Add</a>
 </body>
 </html>
