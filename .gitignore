@@ -1,0 +1,6 @@
+/.metadata/
+
+*.class
+*.jar
+*.war
+*.log
