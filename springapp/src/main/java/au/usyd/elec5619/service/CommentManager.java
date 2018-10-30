@@ -16,5 +16,6 @@ public interface CommentManager extends Serializable {
 	public Comment       getCommentById(long id);
 	public List<Comment> getCommentsByKeyWord(String keyWord);
 	public List<Comment> getCommentsByUser(long userId);
+	public List<Comment> getCommentsByProduct(long productId);
 	
 }

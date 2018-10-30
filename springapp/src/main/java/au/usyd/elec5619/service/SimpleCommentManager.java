@@ -73,4 +73,12 @@ public class SimpleCommentManager implements CommentManager {
 		return this.sessionFactory.getCurrentSession().createQuery(hql).list();
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Comment> getCommentsByProduct(long productId) {
+		// TODO Unsolved potential type safety issue
+		String hql = String.format("FROM Comment where productId = %d", productId);
+		return this.sessionFactory.getCurrentSession().createQuery(hql).list();
+	}
+
 }
